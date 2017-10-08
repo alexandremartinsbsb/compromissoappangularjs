@@ -67,5 +67,5 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
 * [Como fazer](https://i.imgur.com/sjtUnMZ.gif)
 
 ## Começando
-* No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
+* No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev` para ambiente de desenvolvimento e o comando `gulp` para ambiente de produção.
 * No servidor, 'starta' o servidor.
