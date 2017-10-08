@@ -73,7 +73,7 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
     * É necessario configurar o `standalone.xml` do Wildfly, devido as politicas de segurança dos browsers.
     Insira as seguintes configurações:
     
-    `<host name="default-host" alias="localhost">
+    <host name="default-host" alias="localhost">
       <location name="/" handler="welcome-content"/>
       <filter-ref name="server-header"/>
       <filter-ref name="x-powered-by-header"/>
@@ -82,10 +82,10 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
       <filter-ref name="Access-Control-Allow-Headers"/>
       <filter-ref name="Access-Control-Allow-Credentials"/>
       <filter-ref name="Access-Control-Max-Age"/>
-    </host>`
+    </host>
     
     
-    `<filters>
+    <filters>
       <response-header name="server-header" header-name="Server" header-value="WildFly/10"/>
       <response-header name="x-powered-by-header" header-name="X-Powered-By" header-value="Undertow/1"/>
       <response-header name="Access-Control-Allow-Origin" header-name="Access-Control-Allow-Origin" header-value="*"/>
@@ -93,7 +93,7 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
       <response-header name="Access-Control-Allow-Headers" header-name="Access-Control-Allow-Headers" header-value="accept, authorization, content-type, x-requested-with"/>
       <response-header name="Access-Control-Allow-Credentials" header-name="Access-Control-Allow-Credentials" header-value="true"/>
       <response-header name="Access-Control-Max-Age" header-name="Access-Control-Max-Age" header-value="1"/>
-    </filters>`
+    </filters>
 ```
 * [Como fazer](https://i.imgur.com/HxI1xig.gif)
 
