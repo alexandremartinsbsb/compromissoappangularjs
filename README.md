@@ -60,6 +60,7 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
     * Acesse o `Java Build Path` do projeto e na aba `Libraries` adicone a biblioteca do Wildfly.
 ```
 ![](https://i.imgur.com/sjtUnMZ.gif)
+![Peek recording itself](https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-recording-itself.gif)
 
 ## Começando
 * No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
