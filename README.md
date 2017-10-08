@@ -58,14 +58,8 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
 * **Servidor**
 ```python    
     * Acesse o `Java Build Path` do projeto e na aba `Libraries` adicone a biblioteca do Wildfly.
+    [Como fazer](https://i.imgur.com/sjtUnMZ.gif)
 ```
-![](https://i.imgur.com/sjtUnMZ.mp4)
-![Peek recording itself](https://i.imgur.com/sjtUnMZ.gif)
-<img src="http://i.imgur.com/sjtUnMZ.mp4" title="teste"/>
-<img src="http://i.imgur.com/sjtUnMZ.gif" title="teste"/>
-[Imgur](https://i.imgur.com/sjtUnMZ.gifv)
-[Imgur](https://i.imgur.com/sjtUnMZ.gif)
-[img]https://i.imgur.com/sjtUnMZ.gif[/img]
 
 ## Começando
 * No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
