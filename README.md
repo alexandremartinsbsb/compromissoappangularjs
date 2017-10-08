@@ -65,6 +65,7 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
 <img src="https://i.imgur.com/sjtUnMZ.gif" title="teste"/>
 [Imgur](https://i.imgur.com/sjtUnMZ.gifv)
 [Imgur](https://i.imgur.com/sjtUnMZ.gif)
+[img]https://i.imgur.com/sjtUnMZ.gif[/img]
 
 ## Começando
 * No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
