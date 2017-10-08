@@ -61,8 +61,8 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
 ```
 ![](https://i.imgur.com/sjtUnMZ.mp4)
 ![Peek recording itself](https://i.imgur.com/sjtUnMZ.gif)
-<img src="https://i.imgur.com/sjtUnMZ.mp4" title="teste"/>
-<img src="https://i.imgur.com/sjtUnMZ.gif" title="teste"/>
+<img src="http://i.imgur.com/sjtUnMZ.mp4" title="teste"/>
+<img src="http://i.imgur.com/sjtUnMZ.gif" title="teste"/>
 [Imgur](https://i.imgur.com/sjtUnMZ.gifv)
 [Imgur](https://i.imgur.com/sjtUnMZ.gif)
 [img]https://i.imgur.com/sjtUnMZ.gif[/img]
