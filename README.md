@@ -60,6 +60,6 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
     * Acesse o `Java Build Path` do projeto e na aba `Libraries` adicone a biblioteca do Wildfly.
 ```
 
-##Começando
+## Começando
 * No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
 * No servidor, 'starta' o servidor.
