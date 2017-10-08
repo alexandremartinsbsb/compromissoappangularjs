@@ -38,6 +38,11 @@ Abaixo segue o passo a passo para a preparação do ambiente.
     * Siga as instruções no link: `https://nodejs.org/`.
 ```
 
+* **Gulp**
+```python
+    * Execute o seguinte comando no terminal `npm install gulp`.
+```
+
 * **Bower**
 ```python
     * Execute o seguinte comando no terminal `$ npm install -g bower`.
