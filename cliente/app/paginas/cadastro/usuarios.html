@@ -1,0 +1,46 @@
+<div class="mdl-cell mdl-cell--12-col breadcrumb" breadcrumb titulo-link1="Principal" link1="/#!/" titulo-link2="Usuário" link2="/#!/usuarios"></div>
+
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid hoverable">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Lista de usuários</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                    <th class="mdl-data-table__cell--non-numeric">Email</th>
+                    <th class="mdl-data-table__cell--non-numeric">Login</th>
+                    <th class="mdl-data-table__cell--non-numeric">Ação</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="usuario in usuarios">
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">{{usuario.nome}}</td>
+                    <td class="mdl-data-table__cell--non-numeric">{{usuario.email}}</td>
+                    <td class="mdl-data-table__cell--non-numeric">{{usuario.login}}</td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <a class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-href="/#!/usuario/visualiza/{{usuario.pk}}">
+                            <i class="material-icons icone-btn-tabela icone-btn-visualizar">visibility</i>
+                        </a>
+                        <a class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-href="/#!/usuario/edita/{{usuario.pk}}">
+                            <i class="material-icons icone-btn-tabela icone-btn-editar">edit</i>
+                        </a>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click="remover(usuario)">
+                            <i class="material-icons icone-btn-tabela icone-btn-excluir">delete</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <botao-link link="/#!/usuario/novo" nome="Novo"></botao-link>
+        <botao-link link="/#!/" nome="Voltar" classes="teste"></botao-link>
+    </div>
+</div>
+
+<div class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+</div>
