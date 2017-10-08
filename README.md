@@ -24,7 +24,7 @@ Abaixo segue o passo a passo para a preparação do ambiente.
 
 * **Eclipse**
 ```python
-    * Baixe o eclipse no link: `https://www.eclipse.org/downloads/eclipse-packages/`.
+    * Baixe o eclipse no link: [eclipse.org/downloads/eclipse-packages/](https://www.eclipse.org/downloads/eclipse-packages/).
     * Acesse o `Marketplace` e instale o seguinte plugin: `JBoss`.
 ```
 
