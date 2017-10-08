@@ -20,4 +20,10 @@ Repositório criado como teste de aprendizado do AngularJS e MongoDB.
 ## Instalação
 Abaixo segue o passo a passo do modo de instalação bem simples.
 
-* 
+* **Cliente**
+```python
+    * Primeiramente clone o projeto: `git clone https://github.com/alexandremartinsbsb/compromissoappangularjs.git`.
+    * Abra o `terminal` na raiz da pasta `cliente` e execute o comando `npm install`.
+    * Com o `terminal` aberto na raiz da pasta `cliente` e execute o comando `bower install`.
+    * Para testar a instalação cliente, com o `terminal` aberto na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
+```
