@@ -59,7 +59,7 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
 ```python    
     * Acesse o `Java Build Path` do projeto e na aba `Libraries` adicone a biblioteca do Wildfly.
 ```
--![alt text](https://imgur.com/a/OHa50 "Orientação de como adicionar a biblioteca do wildfly.")
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/OHa50"><a href="//imgur.com/OHa50"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 ## Começando
 * No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
