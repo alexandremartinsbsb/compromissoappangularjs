@@ -16,3 +16,8 @@ Repositório criado como teste de aprendizado do AngularJS e MongoDB.
 * **Maven** - Uma ferramenta de automação de compilação utilizada primariamente em projetos Java.
 
 * **wildfly-10** - Servidor de aplicação JEE Open Source da comunidade JBoss, permiti a implantação("deploy") de aplicações que sigam os padrões JEE.
+
+## Instalação
+Abaixo segue o passo a passo do modo de instalação bem simples.
+
+* 
