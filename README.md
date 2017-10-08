@@ -63,6 +63,8 @@ Abaixo segue o passo a passo do modo de instalação bem simples.
 ![Peek recording itself](https://i.imgur.com/sjtUnMZ.gif)
 <img src="https://i.imgur.com/sjtUnMZ.mp4" title="teste"/>
 <img src="https://i.imgur.com/sjtUnMZ.gif" title="teste"/>
+[Imgur](https://i.imgur.com/sjtUnMZ.gifv)
+[Imgur](https://i.imgur.com/sjtUnMZ.gif)
 
 ## Começando
 * No cliente, abra o `terminal` na raiz da pasta `cliente` e execute o comando `gulp start-dev`.
