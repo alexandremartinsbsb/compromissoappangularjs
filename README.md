@@ -1,5 +1,7 @@
 # CompromissoAPP - Angularjs
-Repositório criado como teste de aprendizado do AngularJS e MongoDB.
+Repositório criado como start para iniciar um projeto, utilizando como principais tecnologias, AngularJS e MongoDB.
+
+* **Material Design** - É uma linguagem de design desenvolvida pela Google.
 
 * **AngularJS** - Um framework JavaScript open-source, mantido pelo Google, que auxilia na execução de single-page applications.
 
