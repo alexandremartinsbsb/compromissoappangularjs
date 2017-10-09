@@ -15,6 +15,13 @@ import compromissoapp.modelo.Usuario;
 
 public class UsuarioCodec implements CollectibleCodec<Usuario> {
 
+	private static final String	ID			= "_id";
+	private static final String	NOME		= "nome";
+	private static final String	EMAIL		= "email";
+	private static final String	LOGIN		= "login";
+	private static final String	SENHA		= "senha";
+	private static final String	SITUACAO	= "situacao";
+
 	private Codec<Document> codec;
 
 	public UsuarioCodec(Codec<Document> codec) {
@@ -34,16 +41,16 @@ public class UsuarioCodec implements CollectibleCodec<Usuario> {
 		Document document = new Document();
 
 		if (pk == null) {
-			document.put("_id", new ObjectId());
+			document.put(ID, new ObjectId());
 		} else {
-			document.put("_id", new ObjectId(pk));
+			document.put(ID, new ObjectId(pk));
 		}
 
-		document.put("nome", nome);
-		document.put("email", email);
-		document.put("login", login);
-		document.put("senha", senha);
-		document.put("situacao", situacao);
+		document.put(NOME, nome);
+		document.put(EMAIL, email);
+		document.put(LOGIN, login);
+		document.put(SENHA, senha);
+		document.put(SITUACAO, situacao);
 
 		this.codec.encode(writer, document, enconder);
 	}
@@ -60,12 +67,12 @@ public class UsuarioCodec implements CollectibleCodec<Usuario> {
 
 		Usuario usuario = new Usuario();
 
-		usuario.setPk(document.getObjectId("_id").toHexString());
-		usuario.setNome(document.getString("nome"));
-		usuario.setEmail(document.getString("email"));
-		usuario.setLogin(document.getString("login"));
-		usuario.setSenha(document.getString("senha"));
-		usuario.setSituacao(document.getBoolean("situacao"));
+		usuario.setPk(document.getObjectId(ID).toHexString());
+		usuario.setNome(document.getString(NOME));
+		usuario.setEmail(document.getString(EMAIL));
+		usuario.setLogin(document.getString(LOGIN));
+		usuario.setSenha(document.getString(SENHA));
+		usuario.setSituacao(document.getBoolean(SITUACAO));
 
 		return usuario;
 	}
@@ -83,7 +90,7 @@ public class UsuarioCodec implements CollectibleCodec<Usuario> {
 	@Override
 	public BsonValue getDocumentId(Usuario usuario) {
 		if (!this.documentHasId(usuario)) {
-			throw new IllegalStateException("Esse usuario nao tem _id");
+			throw new IllegalStateException("Esse usuario nao tem ".concat(ID));
 		}
 		return new BsonString(usuario.getPk());
 	}

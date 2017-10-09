@@ -22,15 +22,21 @@ import compromissoapp.modelo.Usuario;
 
 public class UsuarioDAOImplementacao implements UsuarioDAO {
 
-	private MongoClient mongoClient;
-	private MongoDatabase database;
+	private static final String	TABELA				= "usuarios";
+	private static final String	ID					= "_id";
+	private static final String	MODIFICADOR_UPDATE	= "$set";
+	private static final String	URL					= "127.0.0.1:27017";
+	private static final String	BANCO				= "compromissoapp";
+
+	private MongoClient		mongoClient;
+	private MongoDatabase	database;
 
 	@Override
 	public Usuario getUsuario(String pk) {
 		this.criarConexao();
 
-		MongoCollection<Usuario> collection = this.database.getCollection("usuarios", Usuario.class);
-		Usuario usuario = collection.find(Filters.eq("_id", new ObjectId(pk))).first();
+		MongoCollection<Usuario> collection = this.database.getCollection(TABELA, Usuario.class);
+		Usuario usuario = collection.find(Filters.eq(ID, new ObjectId(pk))).first();
 
 		this.fecharConexao();
 
@@ -41,7 +47,7 @@ public class UsuarioDAOImplementacao implements UsuarioDAO {
 	public List<Usuario> getUsuarios() {
 		this.criarConexao();
 
-		MongoCollection<Usuario> collection = this.database.getCollection("usuarios", Usuario.class);
+		MongoCollection<Usuario> collection = this.database.getCollection(TABELA, Usuario.class);
 		MongoCursor<Usuario> mongoCursor = collection.find(Usuario.class).iterator();
 
 		List<Usuario> listaUsuarios = this.popularListaUsuario(mongoCursor);
@@ -55,7 +61,7 @@ public class UsuarioDAOImplementacao implements UsuarioDAO {
 	public Usuario salvar(Usuario usuario) {
 		this.criarConexao();
 
-		MongoCollection<Usuario> collection = this.database.getCollection("usuarios", Usuario.class);
+		MongoCollection<Usuario> collection = this.database.getCollection(TABELA, Usuario.class);
 		collection.insertOne(usuario);
 		this.fecharConexao();
 
@@ -67,8 +73,8 @@ public class UsuarioDAOImplementacao implements UsuarioDAO {
 
 		this.criarConexao();
 
-		MongoCollection<Usuario> colecaoUsuarios = this.database.getCollection("usuarios", Usuario.class);
-		colecaoUsuarios.updateOne(Filters.eq("_id", new ObjectId(pk)), new Document("$set", usuario));
+		MongoCollection<Usuario> colecaoUsuarios = this.database.getCollection(TABELA, Usuario.class);
+		colecaoUsuarios.updateOne(Filters.eq(ID, new ObjectId(pk)), new Document(MODIFICADOR_UPDATE, usuario));
 		this.fecharConexao();
 
 		return usuario;
@@ -79,8 +85,8 @@ public class UsuarioDAOImplementacao implements UsuarioDAO {
 
 		this.criarConexao();
 
-		MongoCollection<Usuario> colecaoUsuarios = this.database.getCollection("usuarios", Usuario.class);
-		colecaoUsuarios.deleteOne(Filters.eq("_id", new ObjectId(pk)));
+		MongoCollection<Usuario> colecaoUsuarios = this.database.getCollection(TABELA, Usuario.class);
+		colecaoUsuarios.deleteOne(Filters.eq(ID, new ObjectId(pk)));
 
 		this.fecharConexao();
 	}
@@ -95,8 +101,8 @@ public class UsuarioDAOImplementacao implements UsuarioDAO {
 
 		MongoClientOptions clientOptions = MongoClientOptions.builder().codecRegistry(codecRegistry).build();
 
-		this.mongoClient = new MongoClient("127.0.0.1:27017", clientOptions);
-		this.database = mongoClient.getDatabase("compromissoapp");
+		this.mongoClient = new MongoClient(URL, clientOptions);
+		this.database = mongoClient.getDatabase(BANCO);
 	}
 
 	private List<Usuario> popularListaUsuario(MongoCursor<Usuario> resultado) {
